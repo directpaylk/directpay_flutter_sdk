@@ -17,8 +17,8 @@ dependencies:
   flutter_mpgs_sdk:
     git:
       url: git://github.com/directpaylk/directpay_flutter_sdk.git
-      ref: flutter2 
-      #If you are using flutter version 1 then specify "ref:flutter1" 
+      ref: flutter1 
+      #If you are using flutter version 2 then specify "ref:flutter2" 
 ```
 
 Execute the command below to update your project.
