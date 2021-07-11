@@ -56,7 +56,7 @@ class InputViewPager extends StatelessWidget {
                 padding: const EdgeInsets.all(8.0),
                 child: InputForm(
                     focusNode: focusNodes[index],
-                    title: titleMap[index],
+                    title: titleMap[index]?? '',
                     index: index,
                     pageController: pageController),
               );
@@ -72,7 +72,7 @@ class InputForm extends StatefulWidget {
   final FocusNode focusNode;
 
   InputForm(
-      {@required this.title, this.index, this.pageController, this.focusNode});
+      {required this.title, required this.index, required this.pageController, required this.focusNode});
 
   @override
   _InputFormState createState() => _InputFormState();
@@ -81,13 +81,13 @@ class InputForm extends StatefulWidget {
 class _InputFormState extends State<InputForm> {
   var opacicy = 0.3;
 
-  int maxLength;
-  TextInputType textInputType;
+  late int maxLength;
+  late TextInputType textInputType;
   TextEditingController textController = TextEditingController();
 
   void onChange() {
     setState(() {
-      if (widget.index == widget.pageController.page.round()) {
+      if (widget.index == widget.pageController.page!.round()) {
         opacicy = 1;
       } else {
         opacicy = 0.3;
@@ -95,7 +95,7 @@ class _InputFormState extends State<InputForm> {
     });
   }
 
-  String value;
+  late String value;
 
   @override
   void initState() {
@@ -127,6 +127,8 @@ class _InputFormState extends State<InputForm> {
       }
       textInputType = TextInputType.number;
     }
+
+
   }
 
   @override

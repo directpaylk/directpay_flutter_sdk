@@ -17,24 +17,24 @@ class _MyAppState extends State<MyApp> {
     print("Closed");
   }
 
-  void onErrorCardForm(String error,String description){
+  void onErrorCardForm(String? error,String? description){
     print(error);
   }
 
   void onCompleteCardForm(
-      String status,
-      String transactionId,
-      String description) {
-    print("Status:" + status);
-    print("Transaction ID:" + transactionId);
-    print("Description:" + description);
+      String? status,
+      String? transactionId,
+      String? description) {
+    print("Status:" + status!);
+    print("Transaction ID:" + transactionId!);
+    print("Description:" + description!);
   }
 
 
   @override
   void initState() {
     // Replace with your merchant id here
-    DirectPayCardInput.init("DP00001",Environment.SANDBOX);
+    DirectPayCardInput.init("DP00000",Environment.SANDBOX);
     super.initState();
   }
 

@@ -4,9 +4,9 @@ import 'package:provider/provider.dart';
 import '../constants/constanst.dart';
 
 class CardSign extends StatelessWidget {
-  const CardSign({
-    Key key,
-  }) : super(key: key);
+  // const CardSign({
+  //   Key key,
+  // }) : super(key: key);
 
   @override
   Widget build(BuildContext context) {

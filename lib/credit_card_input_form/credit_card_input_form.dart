@@ -18,25 +18,25 @@ import 'package:provider/provider.dart';
 import 'constants/captions.dart';
 import 'constants/constanst.dart';
 
-typedef CardInfoCallback = void Function(
+typedef CardInfoCallback = Function(
     InputState currentState, CardInfo cardInfo);
 
 class CreditCardInputForm extends StatelessWidget {
   CreditCardInputForm(
-      {this.onStateChange,
-      this.cardHeight,
-      this.frontCardDecoration,
-      this.backCardDecoration,
+      {required this.onStateChange, this.cardHeight = 0,
+      required this.frontCardDecoration,
+      required this.backCardDecoration,
       this.showResetButton = true,
-      this.customCaptions,
+      required this.customCaptions,
       this.nextButtonTextStyle = kDefaultButtonTextStyle,
       this.prevButtonTextStyle = kDefaultButtonTextStyle,
       this.resetButtonTextStyle = kDefaultButtonTextStyle,
       this.nextButtonDecoration = defaultNextPrevButtonDecoration,
       this.prevButtonDecoration = defaultNextPrevButtonDecoration,
-      this.resetButtonDecoration = defaultResetButtonDecoration,this.processing,this.hasError =false});
+      this.resetButtonDecoration = defaultResetButtonDecoration,
+        required this.processing,this.hasError =false});
 
-  final Function onStateChange;
+  final CardInfoCallback onStateChange;
   final double cardHeight;
   final BoxDecoration frontCardDecoration;
   final BoxDecoration backCardDecoration;
@@ -107,18 +107,18 @@ class CreditCardInputImpl extends StatefulWidget {
   bool processing,hasError;
 
   CreditCardInputImpl(
-      {this.onCardModelChanged,
-      this.cardHeight,
-      this.showResetButton,
-      this.frontDecoration,
-      this.backDecoration,
-      this.nextButtonTextStyle,
-      this.prevButtonTextStyle,
-      this.resetButtonTextStyle,
-      this.nextButtonDecoration,
-      this.prevButtonDecoration,
-      this.resetButtonDecoration,
-      this.processing,this.hasError});
+      {required this.onCardModelChanged,
+      required this.cardHeight,
+      required this.showResetButton,
+      required this.frontDecoration,
+      required this.backDecoration,
+      required this.nextButtonTextStyle,
+      required this.prevButtonTextStyle,
+      required this.resetButtonTextStyle,
+      required this.nextButtonDecoration,
+      required this.prevButtonDecoration,
+      required this.resetButtonDecoration,
+      required this.processing,required this.hasError});
 
   @override
   _CreditCardInputImplState createState() => _CreditCardInputImplState();
@@ -233,8 +233,8 @@ class _CreditCardInputImplState extends State<CreditCardInputImpl> {
                                   duration: Duration(milliseconds: 300),
                                   curve: Curves.easeIn);
 
-                              if (!cardKey.currentState.isFront) {
-                                cardKey.currentState.toggleCard();
+                              if (!cardKey.currentState!.isFront) {
+                                cardKey.currentState!.toggleCard();
                               }
                             },
                           ),
@@ -277,7 +277,7 @@ class _CreditCardInputImplState extends State<CreditCardInputImpl> {
                   }
 
                   if (InputState.CVV == _currentState) {
-                    cardKey.currentState.toggleCard();
+                    cardKey.currentState!.toggleCard();
                   }
                   try{
                     Provider.of<StateProvider>(context, listen: false)
@@ -309,7 +309,7 @@ class _CreditCardInputImplState extends State<CreditCardInputImpl> {
                   }
 
                   if (InputState.VALIDATE == _currentState) {
-                    cardKey.currentState.toggleCard();
+                    cardKey.currentState!.toggleCard();
                   }
 
                   try{

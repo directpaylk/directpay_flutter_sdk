@@ -19,24 +19,24 @@ class CardAddForm extends StatefulWidget {
   final directPayOnErrorHandler onErrorCardForm; // Triggers when card form has errors
   final directPayOnCompleteHandler
       onTransactionCompleteResponse; // Triggers when transaction reaches end of cycle
-  final CardAction action;
-  final CardData payment;
+  final CardAction? action;
+  final CardData? payment;
   CardAddForm(
-      {this.onCloseCardForm,
-      this.onTransactionCompleteResponse,
-      this.onErrorCardForm,this.payment,this.action});
+      {required this.onCloseCardForm,
+      required this.onTransactionCompleteResponse,
+      required this.onErrorCardForm,required this.payment,required this.action});
 
 
   createState() => _CardAddForm();
 }
 
 class _CardAddForm extends State<CardAddForm> {
-  CardInfo _cardInfo;
-  String _session, _reference;
+  late CardInfo? _cardInfo;
+  late String? _session, _reference;
   bool _processing = false;
 
   ScreenState _screenState = ScreenState.ADD_CARD_WIDGET;
-  String _errorMessage, _errorTitle, _otpText = "";
+  String? _errorMessage, _errorTitle, _otpText = "";
 
 
   void close() {
@@ -229,7 +229,7 @@ class _CardAddForm extends State<CardAddForm> {
                   decoration: CustomStyles.buttonRedStyle,
                   textStyle: CustomStyles.buttonTextStyle,
                   onTap: this._processing
-                      ? null
+                      ? (){}
                       : () {
                           this.close();
                         },
@@ -294,11 +294,11 @@ class _CardAddForm extends State<CardAddForm> {
               crossAxisAlignment: CrossAxisAlignment.stretch,
               children: <Widget>[
                 _errorTitle != null
-                    ? Text(_errorTitle,
+                    ? Text(_errorTitle!,
                         style: TextStyle(
                             color: Colors.red, fontWeight: FontWeight.bold))
                     : Container(),
-                Text(_errorMessage, style: TextStyle(color: Colors.red))
+                Text(_errorMessage!, style: TextStyle(color: Colors.red))
               ],
             ),
           )
@@ -316,12 +316,12 @@ class _CardAddForm extends State<CardAddForm> {
     String yy = date.split('/')[1];
 
     _session = await this._getSession();
-    print("session: " + _session);
+    print("session: " + _session!);
     if (_session != null) {
       _setProcessing(true);
       try {
         await FlutterMpgsSdk.updateSession(
-            sessionId: _session,
+            sessionId: _session!,
             cardNumber: number,
             cardHolder: name,
             cvv: cvv,
@@ -336,8 +336,8 @@ class _CardAddForm extends State<CardAddForm> {
 
       params["merchantId"] = StaticEntry.merchantId;
       params["_sessionId"] = _session;
-      if(widget.payment != null){
-        params["amount"] = widget.payment.amount.toString();
+      if(widget.payment != null && widget.payment!.amount > 0){
+        params["amount"] = widget.payment!.amount.toString();
       }else{
         params["amount"] = 5;
       }
@@ -439,7 +439,7 @@ class _CardAddForm extends State<CardAddForm> {
             decoration: CustomStyles.buttonStyle,
             textStyle: CustomStyles.buttonTextStyle,
             onTap: this._processing
-                ? null
+                ? (){}
                 : () {
                     close();
                   },
@@ -474,7 +474,7 @@ class _CardAddForm extends State<CardAddForm> {
             decoration: CustomStyles.buttonStyle,
             textStyle: CustomStyles.buttonTextStyle,
             onTap: this._processing
-                ? null
+                ? (){}
                 : () {
                     close();
                   },
@@ -502,13 +502,13 @@ class _CardAddForm extends State<CardAddForm> {
     final Map params = Map();
 
     params["session"] = _session;
-    params["cardNickname"] = widget.payment.cardNickName;
-    params["currency"] = widget.payment.currency.toString().split('.')[1];
-    params["email"] = widget.payment.email;
-    params["mobile"] = widget.payment.mobile;
-    params["reference"] = widget.payment.reference;
-    params["customerName"] = widget.payment.customerName;
-    params["description"] = widget.payment.description;
+    params["cardNickname"] = widget.payment!.cardNickName;
+    params["currency"] = widget.payment!.currency.toString().split('.')[1];
+    params["email"] = widget.payment!.email;
+    params["mobile"] = widget.payment!.mobile;
+    params["reference"] = widget.payment!.reference;
+    params["customerName"] = widget.payment!.customerName;
+    params["description"] = widget.payment!.description;
 
     fetch(context, APIRoutes.ADD_CARD, params, success: (data) {
       try {
@@ -548,13 +548,13 @@ class _CardAddForm extends State<CardAddForm> {
     params["session"] = _session;
     params["mpg3dsId"] = secure3ds;
 
-    params["amount"] = widget.payment.amount.toString();
-    params["currency"] = widget.payment.currency.toString().split('.')[1];
-    params["email"] = widget.payment.email;
-    params["mobile"] = widget.payment.mobile;
-    params["reference"] = widget.payment.reference;
-    params["customerName"] = widget.payment.customerName;
-    params["description"] = widget.payment.description;
+    params["amount"] = widget.payment!.amount.toString();
+    params["currency"] = widget.payment!.currency.toString().split('.')[1];
+    params["email"] = widget.payment!.email;
+    params["mobile"] = widget.payment!.mobile;
+    params["reference"] = widget.payment!.reference;
+    params["customerName"] = widget.payment!.customerName;
+    params["description"] = widget.payment!.description;
 
     fetch(context, APIRoutes.ONE_TIME_PAYMENT, params, success: (data) {
       try {
@@ -611,7 +611,7 @@ class _CardAddForm extends State<CardAddForm> {
     });
   }
 
-  _setErrorMessage(String message, {String title}) {
+  _setErrorMessage(String? message, {String? title}) {
     setState(() {
       this._errorTitle = title;
       this._errorMessage = message;
@@ -619,7 +619,7 @@ class _CardAddForm extends State<CardAddForm> {
   }
 
   Future<String> _getSession() async {
-    String session;
+    late String session;
     _setProcessing(true);
 
     await fetch(context, APIRoutes.GET_SESSION, null, success: (data) {

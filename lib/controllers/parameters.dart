@@ -5,9 +5,9 @@ import '../flutter_mpgs.dart';
 
 
 class StaticEntry{
-  static String accessToken;
-  static String merchantId;
-  static String iosLicense, androidLicense;
+  static late String accessToken;
+  static late String merchantId;
+  static late String iosLicense, androidLicense;
 
   static String STAGE = Env.DEV; //DEV or PROD
   static bool IS_DEV = true; //use to enable logs

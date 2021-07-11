@@ -7,34 +7,32 @@
     <option name="autoReloadType" value="NONE" />
   </component>
   <component name="BranchesTreeState">
-    <expand>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-      <path>
-        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
-        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
-      </path>
-    </expand>
+    <expand />
     <select />
   </component>
   <component name="ChangeListManager">
     <list default="true" id="eef4e01e-ef67-4f1b-b8f7-2a0c0ca17732" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_Packages.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Dart_SDK.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/libraries/Flutter_Plugins.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.lock" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/flutter_mpgs_sdk.iml" beforeDir="false" afterPath="$PROJECT_DIR$/flutter_mpgs_sdk.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pubspec.lock" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/example/pubspec.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/test/widget_test.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/test/widget_test.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/card_add_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/card_add_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/component/custom_round_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/component/custom_round_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/api_controller.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/api_controller.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/check_3ds_webview.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/check_3ds_webview.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/controllers/parameters.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/controllers/parameters.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/components/card_sign.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/components/card_sign.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/components/input_view_pager.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/components/input_view_pager.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/components/reset_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/components/reset_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/components/round_button.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/components/round_button.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/constants/captions.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/constants/captions.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/credit_card_input_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/credit_card_input_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/credit_card_input_form/model/card_info.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/credit_card_input_form/model/card_info.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/directpay_card_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/directpay_card_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/flutter_mpgs.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/flutter_mpgs.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/minimal_card_input_from/minimal_card_input_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/minimal_card_input_from/minimal_card_input_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/support.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/support.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -53,7 +51,7 @@
   <component name="Git.Settings">
     <option name="RECENT_BRANCH_BY_REPOSITORY">
       <map>
-        <entry key="$PROJECT_DIR$" value="master" />
+        <entry key="$PROJECT_DIR$" value="flutter2_12" />
       </map>
     </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +63,6 @@
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="dart.analysis.tool.window.force.activate" value="false" />
@@ -167,32 +164,25 @@
     <option name="LAST_COMMIT_MESSAGE" value="Code improvements" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1312" height="151" key="GridCell.Tab.0.bottom" timestamp="1625891878992">
-      <screen x="0" y="0" width="1366" height="733" />
+    <state width="1866" height="266" key="GridCell.Tab.0.bottom" timestamp="1625992259331">
+      <screen x="0" y="0" width="1920" height="733" />
     </state>
-    <state width="1312" height="151" key="GridCell.Tab.0.bottom/0.0.1366.733@0.0.1366.733" timestamp="1625891878992" />
-    <state width="1312" height="151" key="GridCell.Tab.0.center" timestamp="1625891878992">
-      <screen x="0" y="0" width="1366" height="733" />
+    <state width="1312" height="135" key="GridCell.Tab.0.bottom/0.0.1366.733@0.0.1366.733" timestamp="1625983097795" />
+    <state width="1866" height="266" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1625992259331" />
+    <state width="1866" height="266" key="GridCell.Tab.0.center" timestamp="1625992259331">
+      <screen x="0" y="0" width="1920" height="733" />
     </state>
-    <state width="1312" height="151" key="GridCell.Tab.0.center/0.0.1366.733@0.0.1366.733" timestamp="1625891878992" />
-    <state width="1312" height="151" key="GridCell.Tab.0.left" timestamp="1625891878991">
-      <screen x="0" y="0" width="1366" height="733" />
+    <state width="1312" height="135" key="GridCell.Tab.0.center/0.0.1366.733@0.0.1366.733" timestamp="1625983097792" />
+    <state width="1866" height="266" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1625992259331" />
+    <state width="1866" height="266" key="GridCell.Tab.0.left" timestamp="1625992259331">
+      <screen x="0" y="0" width="1920" height="733" />
     </state>
-    <state width="1312" height="151" key="GridCell.Tab.0.left/0.0.1366.733@0.0.1366.733" timestamp="1625891878991" />
-    <state width="1312" height="151" key="GridCell.Tab.0.right" timestamp="1625891878992">
-      <screen x="0" y="0" width="1366" height="733" />
+    <state width="1312" height="135" key="GridCell.Tab.0.left/0.0.1366.733@0.0.1366.733" timestamp="1625983097790" />
+    <state width="1866" height="266" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1625992259331" />
+    <state width="1866" height="266" key="GridCell.Tab.0.right" timestamp="1625992259331">
+      <screen x="0" y="0" width="1920" height="733" />
     </state>
-    <state width="1312" height="151" key="GridCell.Tab.0.right/0.0.1366.733@0.0.1366.733" timestamp="1625891878992" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" suspend="THREAD" type="Dart">
-          <url>file://$PROJECT_DIR$/lib/card_add_form.dart</url>
-          <line>554</line>
-          <option name="timeStamp" value="31" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <state width="1312" height="135" key="GridCell.Tab.0.right/0.0.1366.733@0.0.1366.733" timestamp="1625983097793" />
+    <state width="1866" height="266" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1625992259331" />
   </component>
 </project>

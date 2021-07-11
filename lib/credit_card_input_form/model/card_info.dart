@@ -4,7 +4,7 @@ class CardInfo {
   String validate;
   String cvv;
 
-  CardInfo({this.cardNumber, this.name, this.validate, this.cvv});
+  CardInfo({required this.cardNumber, required this.name, required this.validate, required this.cvv});
 
   @override
   String toString() {

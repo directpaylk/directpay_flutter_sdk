@@ -3,11 +3,11 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 
 class ResetButton extends StatefulWidget {
-  final Function onTap;
+  final VoidCallback onTap;
   final decoration;
   final textStyle;
 
-  ResetButton({this.onTap, this.decoration, this.textStyle});
+  ResetButton({required this.onTap, this.decoration, this.textStyle});
 
   @override
   _ResetButtonState createState() => _ResetButtonState();

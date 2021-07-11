@@ -11,12 +11,15 @@ class DirectPayCardInput extends StatefulWidget{
   final directPayOnCompleteHandler
   onCompleteResponse; // Triggers when transaction reaches end of cycle
 
-  DirectPayCardInput({this.onCloseCardForm,
-    this.onCompleteResponse,
-    this.onErrorCardForm});
+  DirectPayCardInput({required this.onCloseCardForm,
+    required this.onCompleteResponse,
+    required this.onErrorCardForm});
 
   static init(String merchantId, Environment environment,
       {bool debug = false}) {
+
+    if(merchantId == "DP00000")throw new Exception("Invalid Merchant ID, Please Specify Your Merchant ID");
+
     StaticEntry.merchantId = merchantId;
     switch (environment) {
       case Environment.LIVE:
@@ -47,8 +50,8 @@ class DirectPayCardInput extends StatefulWidget{
 class _DirectPayCardState extends State<DirectPayCardInput>{
 
   bool _visible = false;
-  CardAction _action;
-  CardData _payment;
+  CardAction? _action;
+  CardData? _payment;
 
   start(CardAction action, CardData payment) {
     if(_visible){

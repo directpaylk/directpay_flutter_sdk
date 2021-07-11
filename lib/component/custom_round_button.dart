@@ -1,12 +1,12 @@
 import 'package:flutter/material.dart';
 
 class CustomRoundButton extends StatefulWidget {
-  final Function onTap;
+  final VoidCallback onTap;
   final buttonTitle;
   final decoration;
   final textStyle;
 
-  CustomRoundButton({this.onTap, this.buttonTitle, this.decoration, this.textStyle});
+  CustomRoundButton({required this.onTap, this.buttonTitle, this.decoration, this.textStyle});
 
   @override
   _RoundButtonState createState() => _RoundButtonState();

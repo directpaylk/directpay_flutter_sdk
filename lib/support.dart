@@ -4,8 +4,8 @@ enum PayCurrency {LKR,USD}
 enum CardAction { CARD_ADD, ONE_TIME_PAYMENT }
 enum Environment { LIVE, SANDBOX }
 
-typedef directPayOnCompleteHandler = void Function(String status, String transactionId, String description);
-typedef directPayOnErrorHandler = void Function(String error,String description);
+typedef directPayOnCompleteHandler = void Function(String? status, String? transactionId, String? description);
+typedef directPayOnErrorHandler = void Function(String? error,String? description);
 typedef directPayOnCloseHandler = void Function();
 
 class Card {
@@ -16,7 +16,7 @@ class Card {
   int yy;
   String cardName;
 
-  Card({this.number, this.cvv, this.mm, this.yy, this.cardName});
+  Card({required this.number, required this.cvv, required this.mm, required this.yy, required this.cardName});
 
   @override
   String toString() {
@@ -25,14 +25,14 @@ class Card {
 }
 
 class CardData{
-  double amount;
+  late double amount;
   final PayCurrency currency;
-  final String email,mobile,reference,customerName,description,cardNickName;
+  final String? email,mobile,reference,customerName,description,cardNickName;
 
   CardData.pay({
-    @required this.currency,
-    @required this.amount,
-    @required this.reference,
+    required this.currency,
+    required this.amount,
+    required this.reference,
     this.cardNickName,
     this.email,
     this.mobile,
@@ -41,14 +41,16 @@ class CardData{
   });
 
   CardData.add({
-    @required this.currency,
-    @required this.reference,
+    required this.currency,
+    required this.reference,
     this.cardNickName,
     this.email,
     this.mobile,
     this.customerName,
     this.description
-  });
+  }){
+    amount = 0;
+  }
 
 
 }
