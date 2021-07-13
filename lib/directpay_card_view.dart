@@ -54,7 +54,7 @@ class _DirectPayCardState extends State<DirectPayCardInput>{
   CardData? _payment;
 
   start(CardAction action, CardData payment) {
-    if(_visible){
+    if(_visible && this.mounted){
       setState(() {
         close();
       });
