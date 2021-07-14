@@ -6,6 +6,8 @@ import 'support.dart';
 
 class DirectPayCardInput extends StatefulWidget{
 
+  static GlobalKey<_DirectPayCardState> _myKey = GlobalKey();
+
   final directPayOnCloseHandler onCloseCardForm; // Triggers when card form is closed
   final directPayOnErrorHandler onErrorCardForm; // Triggers when card form has errors
   final directPayOnCompleteHandler
@@ -13,7 +15,7 @@ class DirectPayCardInput extends StatefulWidget{
 
   DirectPayCardInput({required this.onCloseCardForm,
     required this.onCompleteResponse,
-    required this.onErrorCardForm});
+    required this.onErrorCardForm}):super(key:_myKey);
 
   static init(String merchantId, Environment environment,
       {bool debug = false}) {
@@ -32,18 +34,17 @@ class DirectPayCardInput extends StatefulWidget{
     StaticEntry.IS_DEV = debug;
   }
 
-  static var _dpCardView = _DirectPayCardState();
 
   static start(CardAction action, CardData payment) {
-    _dpCardView.start(action, payment);
+    _myKey.currentState!.start(action, payment);
   }
 
   static close() {
-    _dpCardView.close();
+    _myKey.currentState!.close();
   }
 
   @override
-  createState() => _dpCardView;
+  createState() => _DirectPayCardState();
 
 }
 
@@ -53,7 +54,7 @@ class _DirectPayCardState extends State<DirectPayCardInput>{
   CardAction? _action;
   CardData? _payment;
 
-  start(CardAction action, CardData payment) {
+  void start(CardAction action, CardData payment) {
     if(_visible && this.mounted){
       setState(() {
         close();
