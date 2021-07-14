@@ -284,25 +284,27 @@ class _CardAddForm extends State<CardAddForm> {
   }
 
   _errorContainer() {
-    widget.onErrorCardForm(this._errorTitle,this._errorMessage);
-    return this._errorMessage != null
-        ? Container(
-            width: double.infinity,
-            color: Colors.red[100],
-            padding: EdgeInsets.all(10),
-            child: Column(
-              crossAxisAlignment: CrossAxisAlignment.stretch,
-              children: <Widget>[
-                _errorTitle != null
-                    ? Text(_errorTitle!,
-                        style: TextStyle(
-                            color: Colors.red, fontWeight: FontWeight.bold))
-                    : Container(),
-                Text(_errorMessage!, style: TextStyle(color: Colors.red))
-              ],
-            ),
-          )
-        : Container();
+    if(this._errorMessage != null){
+      widget.onErrorCardForm(this._errorTitle,this._errorMessage);
+      return Container(
+        width: double.infinity,
+        color: Colors.red[100],
+        padding: EdgeInsets.all(10),
+        child: Column(
+          crossAxisAlignment: CrossAxisAlignment.stretch,
+          children: <Widget>[
+            _errorTitle != null
+                ? Text(_errorTitle!,
+                style: TextStyle(
+                    color: Colors.red, fontWeight: FontWeight.bold))
+                : Container(),
+            Text(_errorMessage!, style: TextStyle(color: Colors.red))
+          ],
+        ),
+      );
+    }else{
+      return Container();
+    }
   }
 
   _continue(String name, String cardNumber, String date, String cvv) async {
