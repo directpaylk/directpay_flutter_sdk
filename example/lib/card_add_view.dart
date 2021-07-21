@@ -1,23 +1,21 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_mpgs_sdk/directpay_card_view.dart';
 import 'package:flutter_mpgs_sdk/support.dart';
+import 'package:flutter_mpgs_sdk_example/main.dart';
 import 'package:flutter_support_pack/flutter_support_pack.dart';
 
-import 'main.dart';
+class CardAddView extends StatefulWidget {
+  final int reference;
 
-class PaymentView extends StatefulWidget {
-  final int orderId;
-  final double amount;
-
-  PaymentView({Key? key, required this.orderId, required this.amount})
+  CardAddView({Key? key, required this.reference})
       : super(key: key);
 
   @override
-  _PaymentViewState createState() => _PaymentViewState();
+  _CardAddViewState createState() => _CardAddViewState();
 }
 
-class _PaymentViewState extends State<PaymentView> {
-  static const TAG = 'PaymentView';
+class _CardAddViewState extends State<CardAddView> {
+  static const TAG = 'Card Add View';
   String? _transactionId;
   String? _status;
 
@@ -26,7 +24,7 @@ class _PaymentViewState extends State<PaymentView> {
     Future.delayed(Duration(milliseconds: 500), () => _init());
     return Scaffold(
       appBar: AppBar(
-        title: Text('Payment'),
+        title: Text('Card Add'),
       ),
       body: SafeArea(
         child: DirectPayCardInput(
@@ -63,18 +61,17 @@ class _PaymentViewState extends State<PaymentView> {
   }
 
   void _init() {
-    var _cardAction = CardAction.ONE_TIME_PAYMENT;
-    var _cardData = CardData.pay(
-      amount: widget.amount,
+    var _cardAction = CardAction.CARD_ADD;
+    var _cardData = CardData.add(
       currency: PayCurrency.LKR,
-      reference: widget.orderId.toString(),
+      reference: widget.reference.toString(),
     );
     DirectPayCardInput.start(_cardAction, _cardData);
   }
 
   @override
   void dispose() {
-    print("Payment View Disposed");
+    print("Card Add View Disposed");
     super.dispose();
   }
 }

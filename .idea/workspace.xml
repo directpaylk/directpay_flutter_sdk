@@ -11,10 +11,13 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="eef4e01e-ef67-4f1b-b8f7-2a0c0ca17732" name="Default Changelist" comment="Readme">
+    <list default="true" id="eef4e01e-ef67-4f1b-b8f7-2a0c0ca17732" name="Default Changelist" comment="Widget State Bug Fix">
+      <change afterPath="$PROJECT_DIR$/example/lib/card_add_view.dart" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/example/android/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/example/lib/main.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/main.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/example/lib/payment_view.dart" beforeDir="false" afterPath="$PROJECT_DIR$/example/lib/payment_view.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/lib/card_add_form.dart" beforeDir="false" afterPath="$PROJECT_DIR$/lib/card_add_form.dart" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pubspec.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/pubspec.yaml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +52,7 @@
     <property name="dart.analysis.tool.window.force.activate" value="false" />
     <property name="dart.analysis.tool.window.visible" value="false" />
     <property name="io.flutter.reload.alreadyRun" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/lib/assets/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/example/lib" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.2" />
@@ -58,6 +61,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/example/lib" />
       <recent name="C:\Users\sendt\Development\Directpay\Flutter MPGS SDK\flutter-mpgs-sdk\lib\assets\images" />
       <recent name="C:\Users\sendt\Development\Directpay\Flutter MPGS SDK\flutter-mpgs-sdk\lib\credit_card_input_form" />
     </key>
@@ -94,8 +98,53 @@
       <option name="project" value="LOCAL" />
       <updated>1602133199311</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="Permission">
+      <created>1626074461676</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1626074461676</updated>
+    </task>
+    <task id="LOCAL-00004" summary="mounted check">
+      <created>1626150794510</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1626150794510</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Error Message init Trigger">
+      <created>1626244562659</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1626244562659</updated>
+    </task>
+    <task id="LOCAL-00006" summary="Version">
+      <created>1626244678627</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1626244678627</updated>
+    </task>
+    <task id="LOCAL-00007" summary="Widget State Bug Fix">
+      <created>1626246680034</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1626246680034</updated>
+    </task>
+    <option name="localTasksCounter" value="8" />
     <servers />
+  </component>
+  <component name="Vcs.Log.History.Properties">
+    <option name="COLUMN_ORDER">
+      <list>
+        <option value="0" />
+        <option value="2" />
+        <option value="3" />
+        <option value="1" />
+      </list>
+    </option>
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -142,41 +191,62 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="001 beta complete" />
     <MESSAGE value="Code improvements" />
-    <option name="LAST_COMMIT_MESSAGE" value="Code improvements" />
+    <MESSAGE value="Permission" />
+    <MESSAGE value="mounted check" />
+    <MESSAGE value="Error Message init Trigger" />
+    <MESSAGE value="Version" />
+    <MESSAGE value="Widget State Bug Fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="Widget State Bug Fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="488" y="349" width="933" height="391" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog" timestamp="1626069357248">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state x="488" y="349" width="933" height="391" key="#com.intellij.structuralsearch.plugin.ui.StructuralSearchDialog/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626069357248" />
-    <state width="1866" height="426" key="GridCell.Tab.0.bottom" timestamp="1626074098582">
+    <state width="1866" height="312" key="GridCell.Tab.0.bottom" timestamp="1626867716381">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state width="1312" height="135" key="GridCell.Tab.0.bottom/0.0.1366.733@0.0.1366.733" timestamp="1625983097795" />
-    <state width="1866" height="426" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626074098582" />
-    <state width="1866" height="426" key="GridCell.Tab.0.center" timestamp="1626074098582">
+    <state width="1866" height="312" key="GridCell.Tab.0.bottom/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626867716381" />
+    <state width="1866" height="312" key="GridCell.Tab.0.center" timestamp="1626867716381">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state width="1312" height="135" key="GridCell.Tab.0.center/0.0.1366.733@0.0.1366.733" timestamp="1625983097792" />
-    <state width="1866" height="426" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626074098582" />
-    <state width="1866" height="426" key="GridCell.Tab.0.left" timestamp="1626074098582">
+    <state width="1866" height="312" key="GridCell.Tab.0.center/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626867716381" />
+    <state width="1866" height="312" key="GridCell.Tab.0.left" timestamp="1626867716381">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state width="1312" height="135" key="GridCell.Tab.0.left/0.0.1366.733@0.0.1366.733" timestamp="1625983097790" />
-    <state width="1866" height="426" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626074098582" />
-    <state width="1866" height="426" key="GridCell.Tab.0.right" timestamp="1626074098582">
+    <state width="1866" height="312" key="GridCell.Tab.0.left/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626867716381" />
+    <state width="1866" height="312" key="GridCell.Tab.0.right" timestamp="1626867716381">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state width="1312" height="135" key="GridCell.Tab.0.right/0.0.1366.733@0.0.1366.733" timestamp="1625983097793" />
-    <state width="1866" height="426" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626074098582" />
+    <state width="1866" height="312" key="GridCell.Tab.0.right/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626867716381" />
+    <state x="622" y="0" width="666" height="733" key="RollbackChangesDialog" timestamp="1626244530550">
+      <screen x="0" y="0" width="1920" height="733" />
+    </state>
+    <state x="622" y="0" width="666" height="733" key="RollbackChangesDialog/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626244530550" />
     <state x="332" y="0" width="1246" height="733" key="SettingsEditor" timestamp="1626068872526">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state x="332" y="0" width="1246" height="733" key="SettingsEditor/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626068872526" />
+    <state x="455" y="70" width="1000" height="663" key="Vcs.Push.Dialog.v2" timestamp="1626246687885">
+      <screen x="0" y="0" width="1920" height="733" />
+    </state>
+    <state x="455" y="70" width="1000" height="663" key="Vcs.Push.Dialog.v2/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626246687885" />
+    <state x="700" y="438" width="510" height="213" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1626246600291">
+      <screen x="0" y="0" width="1920" height="733" />
+    </state>
+    <state x="700" y="438" width="510" height="213" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626246600291" />
     <state x="584" y="0" width="751" height="733" key="find.popup" timestamp="1626069369273">
       <screen x="0" y="0" width="1920" height="733" />
     </state>
     <state x="584" y="0" width="751" height="733" key="find.popup/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626069369273" />
+    <state x="352" y="52" width="1206" height="681" key="new project wizard" timestamp="1626231960872">
+      <screen x="0" y="0" width="1920" height="733" />
+    </state>
+    <state x="352" y="52" width="1206" height="681" key="new project wizard/1920.0.1366.768/0.0.1920.733@0.0.1920.733" timestamp="1626231960872" />
     <state x="539" y="0" width="840" height="1034" key="search.everywhere.popup" timestamp="1626068868868">
       <screen x="0" y="0" width="1920" height="733" />
     </state>

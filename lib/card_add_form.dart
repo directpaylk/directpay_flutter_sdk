@@ -109,6 +109,7 @@ class _CardAddForm extends State<CardAddForm> {
       child: AnimatedContainer(
         duration: Duration(milliseconds: 300),
         child: Column(mainAxisSize: MainAxisSize.min, children: [
+          widget.action == CardAction.ONE_TIME_PAYMENT?Text("Amount : " +widget.payment!.currency.toString().substring(widget.payment!.currency.toString().indexOf('.')+1) + " "+ widget.payment!.amount.toString(),style: TextStyle(fontSize: 24,fontWeight: FontWeight.bold,color: Colors.black38),):Container(),
           CreditCardInputForm(
             showResetButton: true,
             onStateChange: (InputState currentState, CardInfo cardInfo) {
@@ -608,9 +609,11 @@ class _CardAddForm extends State<CardAddForm> {
   }
 
   _setProcessing(bool processing) {
-    setState(() {
-      this._processing = processing;
-    });
+    if(this.mounted){
+      setState(() {
+        this._processing = processing;
+      });
+    }
   }
 
   _setErrorMessage(String? message, {String? title}) {

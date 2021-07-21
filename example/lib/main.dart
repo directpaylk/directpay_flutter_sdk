@@ -1,10 +1,16 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_mpgs_sdk_example/card_add_view.dart';
 import 'package:flutter_mpgs_sdk_example/payment_view.dart';
+import 'package:flutter_mpgs_sdk/support.dart';
 
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
   // This widget is the root of your application.
+
+  static String merchantId = "DP00000";
+  static Environment environment = Environment.SANDBOX;
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -50,6 +56,9 @@ class _MyHomePageState extends State<MyHomePage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(widget.title),
+        actions: [
+          IconButton(onPressed: () => onPressedCardAdd(000000), icon: Icon(Icons.add))
+        ],
       ),
       body: Column(
         children: [1, 2, 3]
@@ -58,7 +67,7 @@ class _MyHomePageState extends State<MyHomePage> {
             children: [
               Text('$e'),
               TextButton(
-                onPressed: () => onPressed(e, e.toDouble()),
+                onPressed: () => onPressedOneTimePayment(e, e.toDouble()),
                 child: Text('pay $e'),
               ),
             ],
@@ -69,11 +78,20 @@ class _MyHomePageState extends State<MyHomePage> {
     );
   }
 
-  void onPressed(int orderId, double amount) {
+  void onPressedOneTimePayment(int orderId, double amount) {
     Navigator.push(
       context,
       MaterialPageRoute(
         builder: (context) => PaymentView(orderId: orderId, amount: amount),
+      ),
+    );
+  }
+
+  void onPressedCardAdd(int reference) {
+    Navigator.push(
+      context,
+      MaterialPageRoute(
+        builder: (context) => CardAddView(reference: reference),
       ),
     );
   }
